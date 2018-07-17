@@ -142,6 +142,7 @@ client.on('message', message => {
      })
      }
      });
+const Client = new Discord.Client({ fetchAllMembers: true });
 var dat = JSON.parse("{}");
 function forEachObject(obj, func) {
     Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
@@ -149,7 +150,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "KODESIGN.")
+        guild = client.guilds.find("name", "Codes .")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -158,30 +159,33 @@ client.on("ready", () => {
     })
 })
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.find('name', 'welcome');
+    let channel = member.guild.channels.get("450925741010583574");
     if (!channel) {
-        console.log("!channel fails");
+        console.log("!the channel id it's not correct");
         return;
     }
     if (member.id == client.user.id) {
         return;
     }
-    console.log('made it till here!');
+    console.log('-');
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "KODESIGN.")
+        guild = client.guilds.get("466223249106141206");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
-                    console.log(3);
-                    console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
- channel.send(` ♥ **تم دعوته من قبل ${Invite.inviter} ♥ `)            
+ channel.send(`**
+نورت سيرفر كودز يـ = > ${member}
+ تم دعوته من قبل = > ${Invite.inviter}
+ رأبط الدعوة = > https://discord.gg/${Invite.code}
+**`) ;         
  }
             dat[Inv] = Invite.uses;
-        })
-    })
+       
+       });
+    });
 });
 
 client.login(process.env.BOT_TOKEN);
