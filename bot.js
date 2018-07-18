@@ -47,7 +47,29 @@ client.on('message', msg => {
     msg.reply('**هلا ؟**');
   }
 });
-  
+  client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '469155115119411211').setName("W");
+client.channels.find('id', '469155115119411211').setName("We");
+client.channels.find('id', '469155115119411211').setName("Wel");
+client.channels.find('id', '469155115119411211').setName("Welc");
+client.channels.find('id', '469155115119411211').setName("Welco");
+client.channels.find('id', '469155115119411211').setName("Welcom");
+client.channels.find('id', '469155115119411211').setName("Welcome");
+client.channels.find('id', '469155115119411211').setName("Welcome T");
+client.channels.find('id', '469155115119411211').setName("Welcome To");
+client.channels.find('id', '469155115119411211').setName("Welcome To K");
+client.channels.find('id', '469155115119411211').setName("Welcome To KO");
+client.channels.find('id', '469155115119411211').setName("Welcome To KOD");
+client.channels.find('id', '469155115119411211').setName("Welcome To KODE");
+client.channels.find('id', '469155115119411211').setName("Welcome To KODES");
+client.channels.find('id', '469155115119411211').setName("Welcome To KODESI");
+client.channels.find('id', '469155115119411211').setName("Welcome To KODESIG");
+client.channels.find('id', '469155115119411211').setName("Welcome To KODESIGN");
+client.channels.find('id', '469155115119411211').setName("Welcome To KODESIGN.");
+
+  }, 3000);
+});
 
     client.on('message',async message => {
   if(message.content.startsWith(prefix + "2bc")) {
