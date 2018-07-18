@@ -70,6 +70,24 @@ client.channels.find('id', '469155115119411211').setName("Welcome To KODESIGN.")
 
   }, 3000);
 });
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '469158882288205824').setName("W");
+client.channels.find('id', '469158882288205824').setName("We");
+client.channels.find('id', '469158882288205824').setName("Wel");
+client.channels.find('id', '469158882288205824').setName("Welc");
+client.channels.find('id', '469158882288205824').setName("Welco");
+client.channels.find('id', '469158882288205824').setName("Welcom");
+client.channels.find('id', '469158882288205824').setName("Welcome");
+client.channels.find('id', '469158882288205824').setName("Welcome T");
+client.channels.find('id', '469158882288205824').setName("Welcome To");
+client.channels.find('id', '469158882288205824').setName("Welcome To 6");
+client.channels.find('id', '469158882288205824').setName("Welcome To 67");
+client.channels.find('id', '469158882288205824').setName("Welcome To 67N");
+client.channels.find('id', '469158882288205824').setName("Welcome To 67N.");
+
+  }, 3000);
+});
 
     client.on('message',async message => {
   if(message.content.startsWith(prefix + "2bc")) {
