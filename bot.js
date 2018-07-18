@@ -67,26 +67,6 @@ client.on('message',async message => {
     });
   }
 });
-client.on('message', msg => {
-  if (msg.content === 'السلام عليكم') {
-    msg.reply('**وعليكم السلام ورحمه الله وبركاته**');
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'برب') {
-    msg.reply('**تيت**');
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'باك') {
-    msg.reply('**ولكم منور ي حب**');
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'الو') {
-    msg.reply('**هلا ؟**');
-  }
-});
 
 
 client.login(process.env.BOT_TOKEN);
