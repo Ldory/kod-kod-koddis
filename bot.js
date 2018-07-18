@@ -89,6 +89,32 @@ client.on('message', msg => {
     });
   }
 });
+client.on('message', message => {
+if(message.content.startsWith("الرابط") || message.content.startsWith("رابط") || message.content.startsWith("روابط")) {
+        
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 5,
+        maxAge: 86400
+    }).then(invite =>  
+      message.author.sendMessage(invite.url)
+    )
+    const embed = new Discord.RichEmbed()
+        .setColor("2fff00")
+        .setDescription("| :white_check_mark:  | :heart:  تم ارسال الرابط على الخاص  ")
+        .setFooter("67N-KINGDOM")
+      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
+              const Embed11 = new Discord.RichEmbed()
+        .setColor("2fff00")
+        .setDescription(`
+**-------------------
+-تفضل ي عمري الرابط 
+-ونورنا ياجميل :heart: 
+------------------- **`)
+        
+      message.author.sendEmbed(Embed11)
+    }
+});
     client.on('message', message => {
          var prefix = "*"
         if(!message.channel.guild) return;
