@@ -4,7 +4,7 @@ const prefix = '*'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`KODESIGN.`,"http://twitch.tv/S-F")
+client.user.setGame(`KOSTORE..`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -60,13 +60,12 @@ client.channels.find('id', '469155115119411211').setName("Welcome T");
 client.channels.find('id', '469155115119411211').setName("Welcome To");
 client.channels.find('id', '469155115119411211').setName("Welcome To K");
 client.channels.find('id', '469155115119411211').setName("Welcome To KO");
-client.channels.find('id', '469155115119411211').setName("Welcome To KOD");
-client.channels.find('id', '469155115119411211').setName("Welcome To KODE");
-client.channels.find('id', '469155115119411211').setName("Welcome To KODES");
-client.channels.find('id', '469155115119411211').setName("Welcome To KODESI");
-client.channels.find('id', '469155115119411211').setName("Welcome To KODESIG");
-client.channels.find('id', '469155115119411211').setName("Welcome To KODESIGN");
-client.channels.find('id', '469155115119411211').setName("Welcome To KODESIGN.");
+client.channels.find('id', '469155115119411211').setName("Welcome To KOS");
+client.channels.find('id', '469155115119411211').setName("Welcome To KOST");
+client.channels.find('id', '469155115119411211').setName("Welcome To KOSTO");
+client.channels.find('id', '469155115119411211').setName("Welcome To KOSTOR");
+client.channels.find('id', '469155115119411211').setName("Welcome To KOSTORE");
+client.channels.find('id', '469155115119411211').setName("Welcome To KOSTORE.");
 
   }, 3000);
 });
@@ -155,6 +154,10 @@ if(message.content.startsWith("الرابط") || message.content.startsWith("ر�
       message.author.sendEmbed(Embed11)
     }
 });
+client.on('ready',  () => {
+client.user.setUsername("KOSTORE.")
+      })
+
     client.on('message', message => {
          var prefix = "*"
         if(!message.channel.guild) return;
